@@ -1,0 +1,192 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary: #2563eb;
+    --dark: #1e293b;
+    --light: #f8fafc;
+}
+
+/* Layout Geral */
+.container {
+    padding: 80px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.bg-gray { background-color: #f1f5f9; }
+
+/* Flexbox Classes */
+.flex-row {
+    display: flex;
+    flex-wrap: wrap; /* Importante para responsividade */
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary);
+    color: white;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Garante que o header fique acima de outros elementos */
+}
+
+header nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 15px; /* Ajusta o alinhamento vertical dos links */
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+    color: #1e293b;
+}
+
+/* Hero Section */
+.hero {
+    margin-top: 20px; /* Compensa a altura do header fixo */
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../img/hero-bg.jpg') center/cover;
+    color: white;
+    text-align: center;
+}
+
+.hero div {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+.hero div p {
+    font-size: 1.2rem;
+    margin-bottom: 35px;
+}
+
+/* Estilo para as imagens dentro dos cards */
+.img-servico {
+    width: 352px;      /* Tamanho fixo para ícones */
+    height: auto;
+    margin-bottom: 15px; /* Espaço entre a imagem e o título */
+}
+
+/* Cards de Serviços */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza a imagem e o texto horizontalmente */
+    text-align: center;
+    flex: 1 1 300px; /* Flexbox: cresce, diminui e tem base de 300px */
+    padding: 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Container específico para a seção Sobre */
+.flex-sobre {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 5%;
+}
+
+.col-img, .col-texto {
+    flex: 1; /* Faz as duas colunas terem o mesmo tamanho */
+}
+
+.img-fluida {
+    width: 100%;
+    height: auto;
+    border-radius: 15px; /* Bordas arredondadas dão um toque moderno */
+    box-shadow: 10px 10px 0px var(--primary); /* Um detalhe visual extra */
+}
+
+
+/* Formulário (Dobra 5) */
+.contato-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 30px auto;
+    gap: 15px;
+}
+
+.contato-form input, .contato-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn {
+    background-color: var(--primary);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: var(--);
+    color: var(--dark);
+}
+
+footer {
+    background-color: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 20px 5%;
+    margin-top: 40px;
+}
+
+/* Responsividade (Media Query) */
+/* Quando a tela for menor que 768px (Tablets e Celulares) */
+@media screen and (max-width: 768px) {
+    
+    .flex-row, .flex-sobre {
+        flex-direction: column !important; /* Força os itens a ficarem um abaixo do outro */
+    }
+
+    .card, .col-img, .col-texto {
+        width: 100%; /* Garante que ocupem a largura total da tela */
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem; /* Diminui o texto para não vazar no celular */
+    }
+
+    .navbar {
+        flex-direction: column; /* Alinha logo e menu verticalmente */
+        gap: 10px;
+    }
+}
