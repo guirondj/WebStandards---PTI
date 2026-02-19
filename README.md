@@ -3,7 +3,7 @@
 [cite_start]Este projeto foi desenvolvido como parte da **Produção Textual Individual (PTI)** da disciplina **Web Standards**. [cite_start]O objetivo foi criar uma Landing Page responsiva para um prestador de serviço local, utilizando tecnologias puras[cite: 7].
 
 ## 🔗 Link para Acesso (Vercel)
-> [cite_start]**[CLIQUE AQUI PARA VER O SITE ONLINE](COLE_AQUI_O_LINK_DO_NETLIFY)** 
+> [cite_start]**[CLIQUE AQUI PARA VER O SITE ONLINE](https://web-standards-pti-five.vercel.app/)** 
 
 ---
 
